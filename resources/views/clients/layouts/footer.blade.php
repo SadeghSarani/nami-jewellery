@@ -1,4 +1,12 @@
 <!-- Start footer -->
+<div class="social-buttons">
+    <a href="" class="instagram-button">
+        <img src="{{asset('vendor/assets/img/instagram.png')}}" alt="Instagram">
+    </a>
+    <a href="" class="telegram-button">
+        <img src="{{asset('vendor/assets/img/telegram.png')}}" alt="Telegram">
+    </a>
+</div>
 <footer class="main-footer dt-sl position-relative" id="footer" style="text-align: center">
     <div class="footer-top">
         <div class="container">
@@ -6,7 +14,9 @@
 
                 <div class="col-md-4 footer-info">
                     <h5 class="border-bottom pb-2"> درباره ما</h5>
-                    <p style="text-align: justify">ما یک وبسایت فروش موبایل و لوازم جانبی موبایل هستیم که با هدف ارائه بهترین تجربه خرید برای مشتریان عزیز ایجاد شده است. ما بهترین برندهای موبایل را با قیمت‌های رقابتی و ارائه محصولات با کیفیت به شما ارائه می‌دهیم. همچنین، ما لوازم جانبی موبایلی از جمله کاورها، شارژرها، هدفون‌ها و بسیاری از محصولات دیگر را نیز در اختیار شما قرار می‌دهیم. با ما همراه باشید و تجربه‌ی بی‌نظیر خرید آنلاین را تجربه کنید.
+                    <p style="text-align: justify">
+                        به خانه‌ای از زیبایی و براقی خوش آمدید؛ خانه‌ای که نام آن "گالری نامی جواهر" است. ما به عنوان یک مقصد متخصص در نقره‌جات، افتخار داریم دو شعبه فعال در محل‌هایی استراتژیک و دلنشین داشته باشیم. بازار امام رضا طبقه دوم و امامت بین امامت ۱۵ و ۱۷، دو آدرس ممتازی هستند که خوشحالیم در آن‌ها میزبان شما عزیزان هستیم.
+                        با آدرس‌های شعبه ۱ در بازار امام رضا طبقه دوم و شعبه ۲ در امامت بین امامت ۱۵ و ۱۷، شما به دنیایی از زیبایی و اشیاء ارزشمند خوش آمدید می‌گویید. ما در گالری نامی جواهر، منتظر دیدار شما هستیم تا جلوه‌ای از جواهرات با کیفیت و طراحی‌های جذاب را به شما عرضه کنیم.
                     </p>
                 </div>
 
@@ -25,13 +35,13 @@
                 <div class="col-md-4 footer-contact">
                     <h5 class="border-bottom pb-2">ارتباط با ما </h5>
                     <div style="text-align: justify">
-                        <p><i class="bi bi-geo-alt"></i> مشهد -پاساژ علاءالدین - طبقه منفی یک</p>
-                        <p><i class="bi bi-envelope"></i> info@nasimertebat.com</p>
-                        <p><i class="bi bi-phone"></i> 09152931003</p>
+                        <p><i class="bi bi-geo-alt"></i> شعبه ۱ در بازار امام رضا طبقه دوم و شعبه ۲ در امامت بین امامت ۱۵ و ۱۷</p>
+                        <p><i class="bi bi-envelope"></i> example@gmail.com</p>
+                        <p><i class="bi bi-phone"></i> 09154071025</p>
                         <div class="social-links">
-                            <a href="https://t.me/nasim_ertebat1" class="telegram  text-dark"><i class="bi bi-telegram"></i></a>
+                            <a href="" class="telegram  text-dark"><i class="bi bi-telegram"></i></a>
                             <a href="#" class="facebook text-dark"><i class="bi bi-facebook"></i></a>
-                            <a href="https://instagram.com/nasimertebat?igshid=MzNlNGNkZWQ4Mg==" class="instagram text-dark"><i class="bi bi-instagram"></i></a>
+                            <a href="" class="instagram text-dark"><i class="bi bi-instagram"></i></a>
                         </div>
                     </div>
 

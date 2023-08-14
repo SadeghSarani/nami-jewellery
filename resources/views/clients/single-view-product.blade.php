@@ -74,22 +74,6 @@
                             </ul>
                         </div>
                         <br>
-                        <table class="table table-active">
-                            <h5 class="text-center"> ویژگی‌های محصول</h5>
-                            <tbody>
-                            @foreach($product->customField as $item)
-                                <tr>
-                                    <td class="text-center" style="background: #7eb9c0"><h4>@if($item->icon)
-                                                <i style="color: white" class="{{$item->icon}}"></i>
-                                            @else
-                                                <i style="color: white" class="bi bi-check-circle-fill"></i>
-                                            @endif</h4></td>
-                                    <td><span> {{$item->key}}</span></td>
-                                    <td><span>{{$item->value}}</span></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
                     </div>
                     <!-- Product Info -->
                     <div class="col-lg-8 mt-3 col-md-12 pb-5 product-info-block">
@@ -106,6 +90,26 @@
 
                                     </div>
                                     <p class="little-des pt-0 mt-0">{{$product->description}}</p>
+
+                                    <div class="product-params dt-sl">
+                                        <ul class="mt-0" data-title=" ویژگی‌های محصول">
+                                            @foreach($product->customField as $item)
+                                                <li>
+                                                    <span>{{$item->key}}: </span>
+                                                    <span> {{$item->value}} </span>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                        <div class="sum-more">
+                                <span class="show-more btn-link-border">
+                                    + موارد بیشتر
+                                </span>
+                                            <span class="show-less btn-link-border">
+                                    بستن -
+
+                                </span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-xl-4 col-md-5 col-sm-8 mx-sm-auto mx-0">
                                     <h6>
@@ -179,9 +183,9 @@
                                             <h2><span class=""><i class="bi bi-shop"></i></span></h2>
                                             <h2 class=" mb-0 mx-1 d-block" style="color: black">فروشنده: <span
                                                     id="attributeGroup-2"></span></h2>
-                                            <h2 class=" mb-0 mx-1 d-block" style="color: black">فروشگاه نسیم ارتباط
+                                            <h6 class=" mb-0 mx-1 d-block" style="color: black"> جواهر فروشی نامی
                                                 <span
-                                                    id="attributeGroup-2"></span></h2>
+                                                    id="attributeGroup-2"></span></h6>
                                         </div>
                                         <hr>
                                         <div class="dt-sl box-Price-number box-margin">
@@ -216,7 +220,8 @@
                                                                 <div class="col-6 d-flex justify-content-end">
                                                                     <div class="discount show-discount mr-3 "
                                                                          id="discount">
-                                                                        <del style="font-weight: bold" class="pt-3" id="price-discount">
+                                                                        <del style="font-weight: bold" class="pt-3"
+                                                                             id="price-discount">
 
                                                                         </del>
                                                                     </div>
@@ -316,7 +321,8 @@
                                     <li>
                                         <div class="comment-body">
                                             <div class="comment-author">
-                                                <cite class="fn">{{ $product->comments->first()->user->name . " " .  $product->comments->first()->user->family }}</cite>
+                                                <cite
+                                                    class="fn">{{ $product->comments->first()->user->name . " " .  $product->comments->first()->user->family }}</cite>
                                                 <div class="commentmetadata">
                                                     {{ verta($comment->created_at)->formatDate('Y-m-d') }}
                                                 </div>
@@ -453,7 +459,7 @@
                         showModal();
                     } else {
                         $('#status-cart-action').text('با خطا مواجه شد');
-                        $('#message-cart-action').text('به سبد خرید شما اضافه نشد');
+                        $('#message-cart-action').text(data.message);
                         showModal();
                     }
                 }

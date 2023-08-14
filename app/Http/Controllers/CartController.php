@@ -21,6 +21,10 @@ class CartController extends Controller
     {
         $user = checkUserLogin();
 
+        if(!$user) {
+            return  ['status' => false, 'message' => 'ابتدا به حساب کاربری وارد شوید'];
+        }
+
         $productItem = $this->productItemRepository->getCount($request->data['product_item_id']);
         if ($productItem->quantity < $request->data['count']) {
 
@@ -48,9 +52,11 @@ class CartController extends Controller
                 if ($cart->productItem->discount_percent == 0 || $cart->productItem->discount_percent == null) {
 
                     $total += $cart->productItem->price;
+                    return true;
                 }
 
                 $total += $cart->productItem->price - ($cart->productItem->price * ($cart->productItem->discount_percent) / 100);
+                return true;
             }
         });
         return view('clients.carts-user')->with(['user' => checkUserLogin(),

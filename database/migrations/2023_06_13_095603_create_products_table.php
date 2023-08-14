@@ -18,7 +18,6 @@ return new class extends Migration
             $table->bigInteger('product_category_id');
             $table->bigInteger('product_group_id');
             $table->string('fa_name');
-            $table->string('en_name');
             $table->string('warranty')->nullable();
             $table->json('images');
             $table->longText('description')->nullable();

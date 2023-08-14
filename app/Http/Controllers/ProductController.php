@@ -63,6 +63,7 @@ class ProductController extends Controller
         $category      = $this->productCategoryRepository->get();
         $productGroups = $this->productGroupRepository->get();
         $products =  $this->productRepository->getFitter($request);
+
         return view('clients.products', ['products' => $products, 'category' => $category, 'productGroups' => $productGroups]);
     }
 

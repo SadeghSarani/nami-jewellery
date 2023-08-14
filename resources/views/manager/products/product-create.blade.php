@@ -61,13 +61,9 @@
 
             <div class="row">
 
-                <div class="mb-3 col-md-6">
+                <div class="mb-3 col-md-12">
                     <input type="text" class="form-control account-font" name="fa_name" id="fa_name"
                            placeholder="نام فارسی" required>
-                </div>
-                <div class="mb-3 col-md-6">
-                    <input type="text" class="form-control account-font" name=en_name id="en_name"
-                           placeholder="نام انگلیسی" required>
                 </div>
             </div>
 
@@ -86,7 +82,7 @@
                             <input class="form-check-input" type="checkbox" value="true" id="most_sold_products"
                                    name="most_sold_products">
                             <label class="form-check-label" for="flexCheckDefault">
-                                نمایش در پر فروش ترین محصولات
+                                نمایش در پیشنهادات شگفت انگیز
                             </label>
                         </div>
 
@@ -94,7 +90,7 @@
                             <input class="form-check-input" type="checkbox" value="true" id="special_offers"
                                    name="special_offers">
                             <label class="form-check-label" for="flexCheckChecked">
-                                نمایش در پیشنهاد های ویژه
+                                نمایش در پیشنهاد تخفیف های ویژه
                             </label>
                         </div>
 
@@ -212,7 +208,7 @@
                             <label for="value">آیکون :</label>
                             <input type="text" class="form-control account-font" name="technical_specifications0[icon]"
                                    id="value"
-                                   style="height: 30px; font-size: 12px">
+                                   style="height: 30px; font-size: 12px" disabled>
                         </div>
 
                     </div>

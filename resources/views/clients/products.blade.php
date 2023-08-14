@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 sticky-sidebar">
                     <div class="dt-sn mb-3">
-                        <form action="{{ route('get-filter') }}" method="POST" id="products-filter-form">
+                        <form action="{{ route('get-filter') }}" method="GET" id="products-filter-form">
                             <div class="col-12">
                                 <div class="section-title text-sm-title title-wide mb-1 no-after-title-wide">
                                     <h2>فیلتر محصولات</h2>

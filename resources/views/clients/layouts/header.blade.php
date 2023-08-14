@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{asset('vendor/assets/img/logo.jpeg')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('vendor/assets/img/nami-logo.PNG')}}" type="image/x-icon">
 
     <title>@yield('title')</title>
 
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/assets/css/toastr.css') }}/">
 
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="{{ asset('vendor/assets/css/main.css?v=3.1.1') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/assets/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/assets/css/custom.css') }}">
 
@@ -71,12 +71,12 @@
                     <ul class="list float-right hidden-md">
                         <li class="list-item">
                             <a>
-                                <img src="{{asset('vendor/assets//img/logo.jpeg')}}" style="width: 50px">
+                                <img src="{{asset('vendor/assets/img/nami-logo.PNG')}}" style="width: 50px">
                             </a>
                         </li>
 
                         <li class="list-item">
-                            <a class="nav-link">فروشگاه نسیم ارتباط</a>
+                            <a class="nav-link">فروشگاه جواهر فروشی نامی</a>
                         </li>
 
                         <li class="list-item">
@@ -126,21 +126,21 @@
 
                     </ul>
                     <ul class="nav float-left">
-                        <li class="nav-item" id="cart-list-item">
+                        <li class="nav-item account" id="cart-list-item" style="margin-left: 10px;background: linear-gradient(to right, #86837a, #cac8b3, #99907b, #999386)">
                             <a class="nav-link" href="{{route('getCarts')}}"
                                aria-expanded="false">
-                                <span class="label-dropdown">سبد خرید</span>
-                                <i class="bi bi-cart"></i>
+                                <span class="label-dropdown" style="color: white">سبد خرید</span>
+                                <i class="bi bi-cart" style="color: white"></i>
                             </a>
                         </li>
                         <!--start .author-author__info-->
                         <ul class="nav float-left">
 
-                            <li class="nav-item account dropdown">
+                            <li class="nav-item account dropdown" style="background: linear-gradient(to right, #AE8625, #F7EF8A, #D2AC47, #EDC967)">
                                 <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
                                    aria-expanded="false">
-                                    <span class="label-dropdown"> حساب کاربری</span>
-                                    <i class="bi bi-person-circle"></i>
+                                    <span class="label-dropdown" style="color: white"> حساب کاربری</span>
+                                    <i class="bi bi-person-circle" style="color: white"></i>
                                 </a>
                                 @if(!checkUserLogin())
                                     <div class="dropdown-menu dropdown-menu-sm dropdown-menu-left">

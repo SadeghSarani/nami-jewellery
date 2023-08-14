@@ -38,7 +38,7 @@
                             <h2 class="font-weight-bold">ورود به سایت</h2>
                         </div>
                         <form id="login-form" action="{{ route('userLogin') }}" method="POST">
-
+                            @csrf
                             <input type="hidden" name="phone" value="">
                             <div class="form-row-title">
                                 <h3>شماره موبایل</h3>

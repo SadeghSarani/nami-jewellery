@@ -1675,6 +1675,14 @@ section.slider-section {
     margin: auto;
 }
 
+.amazing-product-1 img {
+    width: 300px !important;
+    max-height: calc(100% - 41px);
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin: auto;
+}
+
 .amazing-product a.view-all-amazing-btn {
     display: inline-block;
     font-size: 14px;
@@ -7921,10 +7929,15 @@ footer.mini-footer .copy-right-mini-footer {
         order: 1;
     }
     .amazing-product img {
-        width: 54% !important;
+        width: 136px !important;
         float: right;
         margin: 0;
     }
+
+    .amazing-product-1 img {
+        width: 240px !important;
+    }
+
     .amazing-product .view-all-amazing-btn {
         width: 100% !important;
         margin-top: 81px !important;
@@ -8333,6 +8346,11 @@ footer.mini-footer .copy-right-mini-footer {
     cursor: pointer;
 }
 
+.product-category {
+    min-height:250px !important;
+    max-height:250px !important;
+}
+
 @media (max-width: 480px) {
 
     .prdocut-card-mobile  {
@@ -8342,4 +8360,59 @@ footer.mini-footer .copy-right-mini-footer {
     .prdocut-card-mobile-img {
         max-height: 210px !important;
     }
+
+    .product-category{
+        min-height:180px !important;
+        max-height:180px !important;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.social-buttons {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000; /* Set a higher z-index value */
+}
+
+.instagram-button,
+.telegram-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.instagram-button img,
+.telegram-button img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.instagram-button:hover,
+.telegram-button:hover {
+    transform: scale(1.1);
+}
+
+.instagram-button:hover img,
+.telegram-button:hover img {
+    transform: scale(1.2);
+}
+
+.cards {
+    /* Styles for your cards go here */
+    margin-top: 100px; /* Adjust this margin to create space for the buttons */
 }
