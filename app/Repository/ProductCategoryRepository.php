@@ -24,8 +24,12 @@ class ProductCategoryRepository
      */
     public function get()
     {
-
         return $this->productCategory->query()->paginate(15);
+    }
+
+    public function all()
+    {
+        return $this->productCategory->query()->get();
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('clients.layouts.master')
 
 @section('title')
-    فروشگاه اینترنتی نسیم ارتبط
+    فروشگاه اینترنتی نامی نقره جات
 @endsection
 
 @section('content')
@@ -74,187 +74,157 @@
             </div>
 
             <!-- Start Category-Section -->
-            <div class="row mt-3 mb-3">
-                <div class="col-12">
-                    <div class="category-section dt-sn dt-sl">
+            @foreach($categories as $category)
 
-                        <div class="category-section-title dt-sl">
-                            <h3>دسته بندی محصولات</h3>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product?category_id=1" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/mobile.png') }}" alt="گوشی موبایل"
-                                                 src="{{ asset('/vendor/assets/img/phone.webp') }}"
-                                                 width="150"
-                                                 class="animated fadeIn lazyLoadXT-completed" style="min-height: 150px">
-                                            <h5 class="pt-2 text-center " style="color: #625f5f !important;">گوشی موبایل</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product?category_id=3" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/4.png') }}" alt="تبلت"
-                                                 src="{{ asset('vendor/assets/img/tablet.jpg') }}"
-                                                 width="150"
-                                                 class="animated fadeIn lazyLoadXT-completed" style="min-height: 150px">
-                                            <h4 class="pt-2 text-center" style="color: #625f5f !important;">تبلت</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product?category_id=2" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/5.png') }}"
-                                                 alt="لوازم جانبی"
-                                                 src="{{ asset('vendor/assets/img/5.png') }}"
-                                                 width="150" class="animated fadeIn lazyLoadXT-completed"
-                                                 style="min-height: 150px">
-                                            <h4 class="pt-2 text-center" style="color: #625f5f !important;">لوازم جانبی</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product/get/2/16" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/4545-2.png.png') }}" alt="کامپیوتر"
-                                                 src="{{ asset('vendor/assets/img/4.png') }}"
-                                                 width="150"
-                                                 class="animated fadeIn lazyLoadXT-completed" style="min-height: 150px">
-                                            <h4 class="pt-2 text-center" style="color: #625f5f !important;">هدفون و هنذفری</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product/get/2/17" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/4545-2.png') }}" alt="کامپیوتر"
-                                                 src="{{ asset('vendor/assets/img/4545-2.png') }}"
-                                                 width="150"
-                                                 class="animated fadeIn lazyLoadXT-completed" style="min-height: 150px">
-                                            <h4 class="pt-2 text-center" style="color: #625f5f !important;">ساعت هوشمند</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col move-up">
-                                    <div class="item">
-                                        <a href="https://nasimertebat.com/product/get/2/18" class="promotion-category">
-                                            <img data-src="{{ asset('vendor/assets/img/laptop.png') }}" alt="کامپیوتر"
-                                                 src="{{ asset('vendor/assets/img/11.png') }}"
-                                                 width="150"
-                                                 class="animated fadeIn lazyLoadXT-completed" style="min-height: 150px">
-                                            <h4 class="pt-2 text-center" style="color: #625f5f !important;">اسپیکر</h4>
-                                        </a>
+                @if($loop->iteration == 2)
+                    <section class="slider-section mb-3 amazing-section" style="background: linear-gradient(to right ,#f9f295, #e0aa3e, #e0aa3e,#b88a44)">
+                        <div class="container main-container">
+                            <div class="row mb-3">
+                                <div class="col-lg-12 col-xs-12">
+                                    <div
+                                        class="product-carousel carousel-lg owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage"
+                                                 style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1880px;">
+                                                <div class="owl-item active" style="width: 303.25px; margin-left: 10px;">
+                                                    <div class="item">
+                                                        <div class="amazing-product img-carousel text-center pt-5">
+                                                            <a href="/product/specials">
+                                                                <img src="{{ asset('vendor/assets/img/amazing.png') }}"
+                                                                     alt="pecial products">
+                                                            </a>
+
+                                                            <a href="https://nasimertebat.com/product?special=true"
+                                                               class="view-all-amazing-btn">
+                                                                مشاهده همه
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                @foreach ($most_sold_products as $item)
+                                                    <div @if (in_array($loop->iteration, [1, 2, 3])) class="owl-item active"
+                                                         @else class="owl-item" @endif
+                                                         style="width: 303.25px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <div class="product-card mb-3 prdocut-card-mobile">
+                                                                <div class="product-head">
+                                                                    <div class="rating-stars">
+                                                                        <i class="mdi mdi-star active"></i>
+                                                                        <i class="mdi mdi-star active"></i>
+                                                                        <i class="mdi mdi-star active"></i>
+                                                                        <i class="mdi mdi-star active"></i>
+                                                                        <i class="mdi mdi-star"></i>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <a class="product-thumb"
+                                                                   href="{{route('singleProduct', $item->id)}}">
+                                                                    <img
+                                                                        src="{{ $item->base_image ?  asset('storage/'. $item->base_image) : asset('storage/'. collect($item->images)->first())}}"
+                                                                        alt="{{ $item->fa_name }}"
+                                                                        class="animated fadeIn lazyLoadXT-completed">
+                                                                </a>
+                                                                <div class="product-card-body">
+                                                                    <h5 class="product-title">
+                                                                        <a
+                                                                            href="{{route('singleProduct', $item->id)}}">{{ $item->fa_name  }}</a>
+                                                                    </h5>
+                                                                    <a class="product-meta"
+                                                                       href="">{{ $item->productGroup->name }}</a>
+
+
+                                                                    <div class="product-prices-div">
+                                                                        @if( in_array($item->productItem->first()->discount_percent, [null, 0, false]))
+                                                                            <span class="product-price pt-5">
+                                                                       {{ number_format($item->productItem->first()->price) }} تومان
+                                                                    </span>
+                                                                        @else
+                                                                            <div
+                                                                                class="px-1 radius-large d-flex ai-center jc-center bg-p-700"
+                                                                                style="background: red;border-radius: 32px;width: 90px;font-weight: bold;">
+                                                                        <span class="text-body2-strong"
+                                                                              style="color: white">{{$item->productItem->first()->discount_percent}}% تخفیف </span>
+                                                                            </div>
+                                                                            <del class="pt-3" id="price-discount"
+                                                                                 style="color: red">{{number_format($item->productItem->first()->price)}}
+                                                                                تومان
+                                                                            </del>
+                                                                            <span class="product-price">
+                                                                           {{ number_format($item->productItem->first()->price - (($item->productItem->first()->discount_percent * $item->productItem->first()->price) / 100)) }} تومان
+                                                                    </span>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                @endif
 
-
-            <!-- End Category-Section -->
-
-            <!-- Start special products -->
-            <section class="slider-section mb-3 amazing-section" style="background: #040849">
-                <div class="container main-container">
-                    <div class="row mb-3">
-                        <div class="col-lg-12 col-xs-12">
-                            <div
-                                class="product-carousel carousel-lg owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
-
-
-                                <div class="owl-stage-outer">
-                                    <div class="owl-stage"
-                                         style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1880px;">
-                                        <div class="owl-item active" style="width: 303.25px; margin-left: 10px;">
-                                            <div class="item">
-                                                <div class="amazing-product text-center pt-5">
-                                                    <a href="/product/specials">
-                                                        <img src="{{ asset('vendor/assets/img/amazing-1.png') }}"
-                                                             alt="pecial products">
-                                                    </a>
-
-                                                    <a href="https://nasimertebat.com/product?special=true"
-                                                       class="view-all-amazing-btn">
-                                                        مشاهده همه
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        @foreach ($special_offers as $item)
-                                            <div @if (in_array($loop->iteration, [1, 2, 3])) class="owl-item active"
-                                                 @else class="owl-item" @endif
-                                                 style="width: 303.25px; margin-left: 10px;">
-                                                <div class="item">
-                                                    <div class="product-card mb-3 prdocut-card-mobile">
-                                                        <div class="product-head">
-                                                            <div class="rating-stars">
-                                                                <i class="mdi mdi-star active"></i>
-                                                                <i class="mdi mdi-star active"></i>
-                                                                <i class="mdi mdi-star active"></i>
-                                                                <i class="mdi mdi-star active"></i>
-                                                                <i class="mdi mdi-star"></i>
-                                                            </div>
-
-                                                        </div>
-
-                                                        <a class="product-thumb"
-                                                           href="{{route('singleProduct', $item->id)}}">
-                                                            <img
-                                                                src="{{ $item->base_image ?  asset('storage/'. $item->base_image) : asset('storage/'. collect($item->images)->first())}}"
-                                                                alt="{{ $item->fa_name }}"
-                                                                class="animated fadeIn lazyLoadXT-completed">
-                                                        </a>
-                                                        <div class="product-card-body">
-                                                            <h5 class="product-title">
-                                                                <a
-                                                                    href="{{route('singleProduct', $item->id)}}">{{ $item->fa_name . ' ( ' . $item->en_name . ' ) ' }}</a>
-                                                            </h5>
-                                                            <a class="product-meta"
-                                                               href="">{{ $item->productGroup->name }}</a>
-
-
-                                                            <div class="product-prices-div">
-                                                                @if( in_array($item->productItem->first()->discount_percent, [null, 0, false]))
-                                                                    <span class="product-price pt-5">
-                                                                       {{ number_format($item->productItem->first()->price) }} تومان
-                                                                    </span>
-                                                                @else
-                                                                    <div
-                                                                        class="px-1 radius-large d-flex ai-center jc-center bg-p-700"
-                                                                        style="background: red;border-radius: 32px;width: 90px;font-weight: bold;">
-                                                                        <span class="text-body2-strong"
-                                                                              style="color: white">{{$item->productItem->first()->discount_percent}}% تخفیف </span>
+                @if($category->productGroups != null)
+                    <div class="row mt-3 mb-3">
+                        <div class="col-12 col-sm-12">
+                            <div class="category-section dt-sn dt-sl">
+                                <div class="category-section-title dt-sl">
+                                    <h3>{{$category->name}}</h3>
+                                </div>
+                                <section class="slider-section mb-3 amazing-section" style="background: white">
+                                    <div class="container main-container">
+                                        <div class="row mb-3">
+                                            <div class="col-lg-12 col-xs-12">
+                                                <div
+                                                    class="product-carousel carousel-lg owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                                                    <div class="owl-stage-outer">
+                                                        <div class="owl-stage"
+                                                             style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1880px;">
+                                                            @foreach ($category->productGroups as $item)
+                                                                <div @if (in_array($loop->iteration, [1, 2, 3])) class="owl-item active"
+                                                                     @else class="owl-item" @endif
+                                                                     style="width: 303.25px; margin-left: 10px;">
+                                                                    <div class="item">
+                                                                        <div class="product-card mb-3 product-category">
+                                                                            <a class="product-thumb"
+                                                                               href="{{route('get.product-group-id', [$item->id, $item->product_category_id])}}">
+                                                                                <img
+                                                                                    src="{{ $item->base_image ?  asset('storage/'. $item->base_image) : asset('storage/'. collect($item->images)->first())}}"
+                                                                                    alt="{{ $item->name }}"
+                                                                                    class="animated fadeIn lazyLoadXT-completed">
+                                                                            </a>
+                                                                            <div class="product-card-body">
+                                                                                <h5 class="product-title text-center">
+                                                                                    <a>{{$item->name}}</a>
+                                                                                </h5>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <del class="pt-3" id="price-discount"
-                                                                         style="color: red">{{number_format($item->productItem->first()->price)}}
-                                                                        تومان
-                                                                    </del>
-                                                                    <span class="product-price">
-                                                                           {{ number_format($item->productItem->first()->price - (($item->productItem->first()->discount_percent * $item->productItem->first()->price) / 100)) }} تومان
-                                                                    </span>
-                                                                @endif
-                                                            </div>
-
+                                                                </div>
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endforeach
+                                        </div>
                                     </div>
-                                </div>
-
+                                </section>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                @endif
+            @endforeach
+
+            <!-- End Category-Section -->
+
+            <!-- Start special products -->
             <!-- End special products -->
 
             <!-- Start Banner -->
@@ -294,22 +264,8 @@
             </div>
             <!-- End Banner -->
 
-
-            <<!doctype html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport"
-                      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>Document</title>
-            </head>
-            <body>
-
-            </body>
-            </html>
             <!-- Start special products -->
-            <section class="slider-section mb-3 amazing-section" style="background: #6569ab">
+            <section class="slider-section mb-3 amazing-section" style="background: rgb(7,6,4)">
 
                 <div class="container main-container">
                     <div class="row mb-3">
@@ -324,9 +280,9 @@
                                          style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1880px;">
                                         <div class="owl-item active" style="width: 303.25px; margin-left: 10px;">
                                             <div class="item">
-                                                <div class="amazing-product text-center pt-5">
+                                                <div class="amazing-product img-carousel text-center pt-5 amazing-product-1">
                                                     <a href="/product/specials">
-                                                        <img src="{{ asset('vendor/assets/img/amazing-2.png') }}"
+                                                        <img src="{{ asset('vendor/assets/img/کالاهای-تخفیف-دار.jpg') }}"
                                                              alt="pecial products">
                                                     </a>
 
@@ -364,7 +320,7 @@
                                                         <div class="product-card-body">
                                                             <h5 class="product-title">
                                                                 <a
-                                                                    href="{{route('singleProduct', $item->id)}}">{{ $item->fa_name . ' ( ' . $item->en_name . ' ) ' }}</a>
+                                                                    href="{{route('singleProduct', $item->id)}}">{{ $item->fa_name }}</a>
                                                             </h5>
                                                             <a class="product-meta"
                                                                href="">{{ $item->productGroup->name }}</a>
@@ -408,34 +364,7 @@
             </section>
             <!-- End special products -->
 
-
-            <!-- services -->
-            <div class="bk-icons-footer mb-3">
-                <div class="footer-services">
-                    <div class="row">
-                        <div class="service-item col">
-                            <a>
-                                <img data-src="{{ asset('vendor/assets/img/603a066de9e7a_1614415469.svg') }}">
-                            </a>
-                            <p>کالای اصل</p>
-                        </div>
-                        <div class="service-item col">
-                            <a>
-                                <img data-src="{{ asset('vendor/assets/img/603a065a2f4a6_1614415450.svg') }}">
-                            </a>
-                            <p>پشتیبانی قوی</p>
-                        </div>
-                        <div class="service-item col">
-                            <a>
-                                <img data-src="{{ asset('vendor/assets/img/603a0640caf35_1614415424.svg') }}">
-                            </a>
-                            <p>ارسال سریع کالا</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End services -->
-
+            <!-- Start Category-Section -->
 
             <!-- Start posts -->
             <div class="row">
@@ -492,7 +421,6 @@
                 </div>
             </div>
             <!-- End posts -->
-
         </div>
     </main>
 @endsection

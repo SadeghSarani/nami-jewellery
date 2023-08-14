@@ -1110,7 +1110,7 @@ header.main-header .main-menu .list > .list-item > a::before {
 }
 
 header.main-header .main-menu .list > .list-item:hover > a {
-    color: var(--primary-color) !important;
+    color: orangered !important;
 }
 
 header.main-header .main-menu .list .list-item-has-children .sub-menu a:hover {
@@ -1755,3 +1755,4 @@ input {
     margin: 0 10px;
     font-weight: bold;
 }
+

@@ -18,7 +18,6 @@ class LoginRequest extends FormRequest
                 'regex:/^09[0-9]{9}$/',
                 'digits:11'
             ],
-            'name' => 'string|exists:users.name',
             'password' => 'required|string',
         ];
     }
@@ -26,8 +25,9 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'phone' => 'شماره وارد شده صحیح نمیباشد',
-            'password' => 'رمز عبور خود را وارد کنید',
+            'phone.regex' => 'شماره وارد شده صحیح نمیباشد',
+            'phone.digits' => 'شماره وارد شده صحیح نمیباشد',
+            'password.required' => 'رمز عبور خود را وارد کنید',
         ];
     }
 }

@@ -10,11 +10,24 @@ class Product extends Model
 {
     use  SoftDeletes;
 
-    protected $fillable = ['product_category_id', 'product_group_id', 'fa_name', 'en_name', 'warranty', 'images', 'base_image', 'description', 'general_specifications','special_offers', 'most_sold_products', 'active'];
+    protected $fillable = [
+        'product_category_id',
+        'product_group_id',
+        'fa_name',
+        'warranty',
+        'images',
+        'base_image',
+        'description',
+        'general_specifications',
+        'special_offers',
+        'most_sold_products',
+        'active'
+    ];
 
     protected $casts = [
-      'images' => 'array',
+        'images' => 'array',
     ];
+
     public function productItem()
     {
         return $this->hasMany(ProductItem::class);

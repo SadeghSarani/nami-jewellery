@@ -21,9 +21,9 @@
                        خراسان رضوی - مشهد
                     </strong>
                     <br>
-                    مشهد -پاساژ علاءالدین - طبقه منفی یک<br>
-                    <abbr title="Telephone">تلفن:</abbr> <a href="tel:+989152931003">09152931003</a> <br>
-                    <abbr title="Mail">ایمیل:</abbr><a href="mailto:info@nasimertebat.com">info@nasimertebat.com</a><br>
+                    شعبه ۱ در بازار امام رضا طبقه دوم و شعبه ۲ در امامت بین امامت ۱۵ و ۱۷<br>
+                    <abbr title="Telephone">تلفن:</abbr> <a href="tel:+989154071025">09154071025</a> <br>
+                    <abbr title="Mail">ایمیل:</abbr><a href="">email.example.com</a><br>
                 </address>
             </div>
 
@@ -61,10 +61,14 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-
+                <h2 class="text-center">                شعبه فعال اول امامت</h2>
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24455.726183704843!2d59.59540390349027!3d36.28573266686247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c910b9fe40e81%3A0xe9258c4c701308f1!2sAladdin%20Sharq%20Commercial%20Complex!5e1!3m2!1sen!2sus!4v1687009182283!5m2!1sen!2sus"
-                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d464.9554805652883!2d59.53619778645855!3d36.33100148216063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1691829417495!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br>
+                <h2 class="text-center">                 شعبه فعال دوم بازار امام  رضا</h2>
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2401.5717919836557!2d59.6138913406281!3d36.282902933319534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c90d6ff315ff3%3A0xdeebd7947fe94506!2sBazaar%20Reza!5e0!3m2!1sen!2s!4v1691829295765!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

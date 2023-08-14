@@ -31,9 +31,9 @@ Route::prefix('product')->group(function () {
     Route::get('/', [ProductControllerClient::class, 'allProducts'])->name('allProducts');
     Route::get('/get/category/{category_id}', [ProductControllerClient::class, 'getProductWithCategory'])->name('get.product.withCategory');
     Route::get('/get/{category_id}/{product_group_id}', [ProductControllerClient::class, 'getProductWithProductGroup'])->name('get.product-group-id');
-    Route::get('/{product}', [ProductController::class, 'getProduct'])->name('singleProduct');
+    Route::get('/single/{product}', [ProductController::class, 'getProduct'])->name('singleProduct');
     Route::post('price', [ProductControllerClient::class, 'getPrice'])->name('price');
-    Route::post('/filter', [ProductControllerClient::class, 'getFilter'])->name('get-filter');
+    Route::get('/filter', [ProductControllerClient::class, 'getFilter'])->name('get-filter');
     Route::post('/search', [ProductControllerClient::class, 'getSearch'])->name('search-product');
 });
 

@@ -11,6 +11,8 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
@@ -43,6 +45,15 @@ class ProductGroupController extends Controller
      */
     public function create(Request $request)
     {
+
+        if ($request->filled('file') && $request->file == null){
+            return back()->with('error', 'لطفا یک عکس انتخا نمایید');
+        }
+
+        $fileName = Str::random() . $request->file->getClientOriginalName();
+        $filePath = "product/images/$fileName";
+        Storage::disk('public')->put($filePath, file_get_contents($request->file));
+        $request->merge(['base_image' => $filePath]);
         $this->productGroupRepository->create($request->all());
 
         return back()->with('success', 'عملیات با موفقیت انجام شد .');
