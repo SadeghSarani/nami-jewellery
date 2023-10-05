@@ -21,6 +21,7 @@ class AdminLogin
      */
     public function handle(Request $request, Closure $next)
     {
+
         if (!empty(checkUserLogin()) && (checkUserLogin()->is_admin)) {
             return $next($request);
         }
