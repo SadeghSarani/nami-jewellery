@@ -176,7 +176,7 @@
                         <div class="logo-nav-res dt-sl text-center">
                             <a href="#">
                                 <img width="55" alt="فروشگاه اینترنتی نسیم ارتباط"
-                                     src="{{asset('vendor/assets//img/logo.jpeg')}}">
+                                     src="{{asset('vendor/assets/img/nami-logo.PNG')}}">
                             </a>
                         </div>
                         <div class="search-box-side-menu dt-sl text-center mt-2 mb-3">

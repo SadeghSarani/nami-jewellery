@@ -13,6 +13,7 @@ class ManagerController extends Controller
 {
     public function index()
     {
+
         $countProduct = Product::all()->count();
         $countBlog = Blog::all()->count();
         $countUser = User::all()->count();

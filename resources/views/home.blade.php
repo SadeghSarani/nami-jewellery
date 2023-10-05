@@ -17,7 +17,7 @@
                     <!-- Start main-slider -->
                     <section id="main-slider"
                              class="main-slider main-slider-cs mt-1 carousel slide carousel-fade card hidden-sm"
-                             data-ride="carousel">
+                             data-ride="carousel" style="width: 95%; margin: auto; height: 540px">
 
                         <ol class="carousel-indicators">
                             <li data-target="#main-slider" data-slide-to="0" class=""></li>
