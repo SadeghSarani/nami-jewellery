@@ -104,4 +104,5 @@ Route::get('/272948.txt', function () {
     return file_get_contents(base_path('/272948.txt'));
 });
 
+
 include_once __DIR__ . '/manager/admin.php';
