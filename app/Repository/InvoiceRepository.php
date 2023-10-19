@@ -29,4 +29,25 @@ class InvoiceRepository
         return $this->invoice->query()->where('id', $invoiceId)->with(['invoiceItems.productItem.product', 'user.addresses'])->first();
 
     }
+
+    public function create($data)
+    {
+        return $this->invoice->query()->create($data);
+    }
+
+    public function getAmount($key)
+    {
+        return $this->invoice->query()->where('code_payment', 'like', '%' . $key . '%')->first();
+    }
+
+    public function updateInvoiceStatus($invoiceId, $status)
+    {
+        $invoice = $this->invoice->query()->where('id', $invoiceId)->first();
+
+        $invoice->update([
+            'status' => $status
+        ]);
+
+        return $invoice;
+    }
 }

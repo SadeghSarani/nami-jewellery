@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-develop',
         'version' => 'dev-develop',
-        'reference' => '9db600c3a1576f3a308ffc295256d2447e75a1da',
+        'reference' => '4c7bf560bdc9dee65c43f87f7197b1832fe98e83',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -445,7 +445,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '9db600c3a1576f3a308ffc295256d2447e75a1da',
+            'reference' => '4c7bf560bdc9dee65c43f87f7197b1832fe98e83',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -727,6 +727,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'pishran/zarinpal' => array(
+            'pretty_version' => 'v4.3.3',
+            'version' => '4.3.3.0',
+            'reference' => '49f336fb8fc4722f165a08933d352ce7b784a8a7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pishran/zarinpal',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'psr/container' => array(
             'pretty_version' => '2.0.2',
             'version' => '2.0.2.0',
@@ -814,8 +823,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(

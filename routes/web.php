@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\Managers\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController as ProductControllerClient;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
@@ -99,6 +100,14 @@ Route::get('view/clear', function () {
 Route::get('cache/clear', function () {
     Artisan::call('cache:clear');
 });
+
+Route::prefix('payment')->group(function () {
+
+    Route::post('/{total}', [PaymentController::class, 'pay'])->name('payment');
+    Route::any('/callback', [PaymentController::class, 'index'])->name('callback');
+
+});
+
 
 Route::get('/272948.txt', function () {
     return file_get_contents(base_path('/272948.txt'));
