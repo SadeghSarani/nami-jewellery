@@ -14,6 +14,7 @@ class Invoice extends Model
         'total_price',
         'status',
         'user_id',
+        'product_item_id',
     ];
 
     public function invoiceItems()

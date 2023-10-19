@@ -4,6 +4,14 @@
     <main class="main-content dt-sl mt-4 mb-3" style="transform: none;">
         <div class="container main-container" style="transform: none;">
 
+            @if(session()->has('error'))
+                <div style="padding-top:20px ">
+                    <div class="alert alert-danger">
+                        {{ session()->get('error') }}
+                    </div>
+                </div>
+            @endif
+
 
             <div id="cart-errors" class="alert alert-danger" role="alert" style="display: none;">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -137,14 +145,16 @@
                 </span>
                                                     تومان
                                                 </div>
-                                                <button data-action=""
-                                                        data-redirect=""
-                                                        id="checkout-link" type="button"
-                                                        class="btn-primary-cm btn-with-icon w-100 text-center pr-0 checkout_link">
-                                                    <i class="bi bi-arrow-right-square"></i>
-                                                    ادامه ثبت سفارش
-                                                </button>
-
+                                                <form
+                                                    action="{{ route('payment', $total_price + env('SHIPPING_COST')) }}"
+                                                    method="post">
+                                                    <button name="cart_submit"
+                                                            id="checkout-link" type="submit"
+                                                            class="btn-primary-cm btn-with-icon w-100 text-center pr-0 checkout_link">
+                                                        <i class="bi bi-arrow-right-square"></i>
+                                                        ادامه ثبت سفارش
+                                                    </button>
+                                                </form>
                                                 <div>
                 <span>
                     کالاهای موجود در سبد شما ثبت و رزرو نشده‌اند، برای ثبت سفارش مراحل بعدی را تکمیل کنید.

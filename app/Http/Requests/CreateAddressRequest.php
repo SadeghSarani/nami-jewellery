@@ -17,7 +17,7 @@ class CreateAddressRequest extends FormRequest
         return [
             'address' => 'required|string',
             'city' => 'required|string',
-            'postal_code' => 'required|integer|digits:10',
+            'postal_code' => 'required',
         ];
     }
 }

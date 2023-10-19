@@ -18,6 +18,7 @@
                         <div class="form-ui additional-info dt-sl dt-sn pt-4">
                             <form id="profile-form" action="{{route('address-user')}}"
                                   class="setting_form" method="POST" novalidate="novalidate">
+                                @csrf
                                 <input type="hidden">
                                 <div class="row">
                                     <div class="col-lg-6">

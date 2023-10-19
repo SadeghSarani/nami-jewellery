@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.8",
         "morilog/jalali": "^3.4",
         "nesbot/carbon": "^2.67",
+        "pishran/zarinpal": "^4.3",
         "unisharp/laravel-filemanager": "^2.6"
     },
     "require-dev": {

@@ -31,4 +31,9 @@ class UserRepository
     {
         return $this->model->query()->where('phone', $phone_number)->update($data);
     }
+
+    public function getUser($id)
+    {
+        return $this->model->query()->where('id', $id)->with('addresses')->first();
+    }
 }
