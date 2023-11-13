@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="enamad" content="983862" />
     <link rel="icon" href="{{asset('vendor/assets/img/nami-logo.PNG')}}" type="image/x-icon">
 
     <title>@yield('title')</title>

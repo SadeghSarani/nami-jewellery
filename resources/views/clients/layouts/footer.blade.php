@@ -44,9 +44,7 @@
                             <a href="" class="instagram text-dark"><i class="bi bi-instagram"></i></a>
                         </div>
                     </div>
-
-                    <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=353576&amp;Code=NVfM7nxlQWnjVX1GhbKA"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=353576&amp;Code=NVfM7nxlQWnjVX1GhbKA" alt="" style="cursor:pointer" id="NVfM7nxlQWnjVX1GhbKA"></a>
-
+                    <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=394000&Code=TUtrE6LOPaOCLtLKracLuI71GQGF3CMo'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=394000&Code=TUtrE6LOPaOCLtLKracLuI71GQGF3CMo' alt='' style='cursor:pointer' Code='TUtrE6LOPaOCLtLKracLuI71GQGF3CMo'></a>
                 </div>
             </div>
             <div class="col-4">

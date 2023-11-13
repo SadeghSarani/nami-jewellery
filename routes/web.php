@@ -110,7 +110,7 @@ Route::prefix('payment')->group(function () {
 
 
 Route::get('/272948.txt', function () {
-    return file_get_contents(base_path('/272948.txt'));
+    return file_get_contents(base_path('/694644.txt'));
 });
 
 
